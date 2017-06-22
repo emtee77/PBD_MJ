@@ -1,0 +1,1 @@
+print "the km per litres is ", 100/5
