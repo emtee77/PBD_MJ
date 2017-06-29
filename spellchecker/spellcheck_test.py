@@ -20,6 +20,7 @@ class TestSpellChecker(unittest.TestCase):
 		self.assertEquals(2, len(failed_words))
 		self.assertEquals('mistasdas', failed_words[0])
 		self.assertEquals('spelllleeeing', failed_words[1])
+		self.assertEqual(0, len(self.spellchecker.check_document('spell.words')))
 
         #self.assertFalse(self.spellchecker.check_words('zygotic mistasdas elementary'))
         #self.assertTrue(self.spellchecker.check_words('our first correct sentence'))

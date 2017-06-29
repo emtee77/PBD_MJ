@@ -31,12 +31,14 @@ print check_word(words, "mistasdas")
 
 def check_words(words, sentence):
     words_to_check = sentence.split(' ')
+	failed_words = []
     for word in words_to_check:
         if not check_word(words, word):
             print('Word is misspelt : ' + word)
-            return False
-    return True
-	
+            #return False
+			failed_words.append(word)
+    #return True
+	return failed_words
 	
 print check_words(words, "zygotic")
 print check_words(words, "mistasdas")
